@@ -43,7 +43,7 @@ export class UsersController {
     return user;
   }
 
-  @Get('/currentUser')
+  @Get('/currentuser')
   @UseGuards(AuthGuard)
   whoAmI(@CurrentUser() user: User) {
     // const user = await this.usersService.findOne(session.userId);
