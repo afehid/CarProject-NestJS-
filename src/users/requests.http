@@ -1,11 +1,29 @@
+### Login User
+
+POST  http://localhost:3000/auth/signin
+Content-Type: application/json
+
+{
+  "email":"abyusif4@abyu.com",
+  "password":"abyusif4"
+}
+### sign out
+
+Post  http://localhost:3000/auth/signout
+
+
+### currentUser
+
+Get  http://localhost:3000/auth/currentUser
+
 ### Create a new User
 
 POST  http://localhost:3000/auth/signup
 Content-Type: application/json
 
 {
-  "email":"asdf@asdf.com",
-  "password":"asdlfkajsd"
+  "email":"asdf@abyu.com",
+  "password":"asdf"
 }
 
 
