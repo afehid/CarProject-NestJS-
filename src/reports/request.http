@@ -1,0 +1,22 @@
+###Create a new Report
+
+POST  http://localhost:3000/reports
+Content-Type: application/json
+
+
+{
+  "make": "Fiat",
+
+  "model": "Tipo",
+
+  "year": 2022,
+
+  "mileage": 27000,
+
+  "lng": 0,
+
+  "lat": 0,
+
+  "price": 875000
+
+}

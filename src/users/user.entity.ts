@@ -5,7 +5,9 @@ import {
   Entity,
   Column,
   PrimaryGeneratedColumn,
+  OneToMany,
 } from 'typeorm';
+import { Report } from 'src/reports/report.entity';
 
 @Entity()
 export class User {
@@ -17,6 +19,11 @@ export class User {
 
   @Column()
   password: string;
+
+  //1 User has (many) reports so we made an array
+  // second argument if we want to divide the roles like: if we want before publishing the report an approval from the owner and the approver
+  @OneToMany(() => Report, (report) => report.user)
+  reports: Report[];
 
   @AfterInsert()
   logInsert() {
