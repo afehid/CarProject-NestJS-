@@ -4,8 +4,8 @@ POST  http://localhost:3000/auth/signin
 Content-Type: application/json
 
 {
-  "email":"abyusif4@abyu.com",
-  "password":"abyusif4"
+  "email":"abyusif5@abyu.com",
+  "password":"abyusif5"
 }
 ### sign out
 
@@ -22,8 +22,8 @@ POST  http://localhost:3000/auth/signup
 Content-Type: application/json
 
 {
-  "email":"abyu@abyu.com",
-  "password":"abyu"
+  "email":"abyu6@abyu.com",
+  "password":"abyu5"
 }
 
 

@@ -8,7 +8,6 @@ import { UsersModule } from './users/users.module';
 import { ReportsModule } from './reports/reports.module';
 import { User } from './users/user.entity';
 import { Report } from './reports/report.entity';
-import { Type } from 'class-transformer';
 const cookieSession = require('cookie-session');
 
 @Module({
@@ -46,6 +45,7 @@ const cookieSession = require('cookie-session');
 })
 export class AppModule {
   configure(consumer: MiddlewareConsumer) {
-    consumer.apply(cookieSession({ keys: ['asdfasfd'] })).forRoutes('*');
+    consumer.apply(cookieSession({ keys: ['eeeee'] })).forRoutes('*');
   }
+  // Here we make global middlewares
 }

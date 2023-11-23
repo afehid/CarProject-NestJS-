@@ -25,3 +25,5 @@ export class CurrentUserInterceptor implements NestInterceptor {
     return next.handle();
   }
 }
+
+// remember we make this interceptor to let the decorator to work as a middleware through the interceptor
