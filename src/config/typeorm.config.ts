@@ -25,6 +25,15 @@ export class TypeOrmConfigService implements TypeOrmOptionsFactory {
           database: this.configService.get<string>('DB_NAME'),
           autoLoadEntities: true,
         };
+      case 'production':
+        return {
+          type: 'postgres',
+          synchronize: false,
+          migrationsRun: true,
+          url: process.env.DATABASE_URL,
+          autoLoadEntities: true,
+          ssl: { rejectUnauthorized: false },
+        };
       default:
         throw new Error('Unknown environment');
 
